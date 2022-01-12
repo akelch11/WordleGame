@@ -37,8 +37,6 @@
 
   <p align="center">
     Wordle is a popular word game where a player has multiple guesses to guess a five letter word.
- </p> 
-   <p align = "center">
     Throughout the game, the player is granted hints based on their previous word guesses.
   </p>
 </div>
