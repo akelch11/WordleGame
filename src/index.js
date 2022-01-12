@@ -35,17 +35,17 @@ class Square extends React.Component {
 
 class Board extends React.Component {
   renderSquare(i, row) {
-    // console.log("square " + (5 * row + i) + " created");
-
+    
     var val;
     var color = "";
     
+    // render boxes of previous guesses; row determines which guess it is
     if (row < guesses)
-      val = guessHistory[row].charAt(i).toLowerCase();
-    
-      // console.log(tileColorStatuses[row][i]);
-    if(row < guesses)
-      color = tileColorStatuses[row][i];
+     {
+       val = guessHistory[row].charAt(i).toLowerCase();
+       color = tileColorStatuses[row][i];
+     } 
+     
       
       return <Square value = {val} row = {row} id = {5 * row+ i} color = {color} />;
     
@@ -54,7 +54,7 @@ class Board extends React.Component {
 
   renderRow(rowId) {
 
-    console.log(guesses);
+   
     return (
 
       <div className="board-row">
@@ -171,7 +171,7 @@ class Game extends React.Component {
       for(let i = 0; i < userGuess.length; i++) {
 
         let letter = userGuess.charAt(i).toLowerCase();
-        //console.log(letter);
+        
         // register letter as being used
         if(isLetter(letter))
           this.state.guessedLetters[letter.charCodeAt(0) - 'a'.charCodeAt(0)] = letter;
