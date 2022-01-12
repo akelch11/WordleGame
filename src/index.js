@@ -10,13 +10,6 @@ var guessHistory = [];
 var tileColorStatuses = Array(6);
 
 
-
-
-
-
-
-
-
 class Square extends React.Component {
   
   constructor(props)
@@ -205,6 +198,7 @@ class Game extends React.Component {
 
         });
 
+      document.getElementById("guessBox").value = "";
       cg = this.getCurrentGuess();
       guesses++;
     }
@@ -226,13 +220,14 @@ class Game extends React.Component {
   
   render() {
 
-    let usedLetters = usedLettersToString(this.state.guessedLetters); 
+    let usedLetters = usedLettersToString(this.state.guessedLetters, this.state.word); 
     let win = this.state.correct;
     let titleClass = "";
     let status;
+    let revealWord = "";
     
 
-    if(win && this.state.guesses < 6)
+    if(win && this.state.guesses <= 6)
       {
          status = "Congratulations! You guessed the word!";
          titleClass = "winFont"
@@ -245,6 +240,7 @@ class Game extends React.Component {
           {
             status = "Sorry, you did not guess the word!";
             titleClass = "loseFont";
+            revealWord = "The word was: " + this.state.word;
           }
       }
         
@@ -263,10 +259,13 @@ class Game extends React.Component {
             <button type = "submit" className = "spacing"  onClick = {this.handleGuess.bind(this)}>
                Enter Guess 
             </button> 
+            <h2> 
+              {revealWord}
+            </h2>
           </div>
           <ol>{/* TODO */} </ol>
 
-          <p> Used Letters: <br></br>
+          <p> Letters Not In Word: <br></br>
               {usedLetters}
           </p>
 
@@ -294,13 +293,13 @@ function isLetter(c)
 
 console.log(cg);
 
-function usedLettersToString(letters)
+function usedLettersToString(letters, word)
 {
   let usedLetters = ""; 
   let count = 0;
     for(let i = 0; i < letters.length; i++)
     { 
-       if(letters[i] != null)
+       if(letters[i] != null && word.indexOf(letters[i]) < 0)
         { 
           usedLetters += (letters[i] + " ");
           count++;
