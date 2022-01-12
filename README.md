@@ -36,16 +36,10 @@
 <h3 align="center">Wordle Game</h3>
 
   <p align="center">
-    Wordle is a popular word game where a player has multiple guesses to guess a five letter word. Throughout the game, the player is granted hints based on their previous word guesses.
+    Wordle is a popular word game where a player has multiple guesses to guess a five letter word. <br></br>
+     Throughout the game, the player is granted hints based on their previous word guesses.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+
   </p>
 </div>
 
