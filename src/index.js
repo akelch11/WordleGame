@@ -221,6 +221,7 @@ class Game extends React.Component {
   render() {
 
     let usedLetters = usedLettersToString(this.state.guessedLetters, this.state.word); 
+    let unguessedLetters = unguessedLettersToString(this.state.guessedLetters, this.state.word);
     let win = this.state.correct;
     let titleClass = "";
     let status;
@@ -268,6 +269,9 @@ class Game extends React.Component {
           <p> Letters Not In Word: <br></br>
               {usedLetters}
           </p>
+          <p> Letters Not Guessed: <br></br>
+              {unguessedLetters}
+          </p>
 
           
         </div>
@@ -302,6 +306,23 @@ function usedLettersToString(letters, word)
        if(letters[i] != null && word.indexOf(letters[i]) < 0)
         { 
           usedLetters += (letters[i] + " ");
+          count++;
+        }
+    }
+
+    return usedLetters;
+}
+
+function unguessedLettersToString(letters, word)
+{
+  let usedLetters = ""; 
+  let count = 0;
+    for(let i = 0; i < letters.length; i++)
+    { 
+        // include letters not yet guessed
+       if(letters[i] == null)
+        { 
+          usedLetters += (String.fromCharCode(97 + i) + " ");
           count++;
         }
     }
