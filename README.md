@@ -144,9 +144,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Adam Kelch (https://www.linkedin.com/in/adam-kelch/) - akelch@princeton.edu
+Creator - Adam Kelch (https://www.linkedin.com/in/adam-kelch/) - akelch@princeton.edu
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/akelch11/WordleGame](https://github.com/akelch11/WordleGame)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
