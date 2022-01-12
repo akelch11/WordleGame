@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/akelch11/WordleGame">
-    <img src="exampleGame.png" alt="Logo" width="500" height="500">
+    <img src="exampleGame.png" alt="Logo" width="1000" height="500">
   </a>
 
 <h3 align="center">Wordle Game</h3>
