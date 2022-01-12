@@ -58,3 +58,20 @@ ol, ul {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+.winFont {
+  color: #09be09;
+  size: 18px;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.gray {
+  background-color: gray;
+}

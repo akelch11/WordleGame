@@ -6,6 +6,7 @@ var cg = "";
 var pg = "";
 var guesses = 0;
 var guessHistory = [];
+var tileColorStatuses = Array(6);
 
 
 class Square extends React.Component {
@@ -18,8 +19,12 @@ class Square extends React.Component {
   }
 
   render() {
+
+    var c = "square " + this.props.color;
+    console.log(c);
+
     return (
-      <button className="square">
+      <button className= {c}>
         {this.props.value}
       </button>
     );
@@ -31,11 +36,18 @@ class Board extends React.Component {
     // console.log("square " + (5 * row + i) + " created");
 
     var val;
+    var color = "";
     
     if (row < guesses)
       val = guessHistory[row].charAt(i).toLowerCase();
-  
-    return <Square value = {val} row = {row} id = {5 * row+ i}/>;
+    
+      // console.log(tileColorStatuses[row][i]);
+    if(row < guesses)
+      color = tileColorStatuses[row][i];
+      
+      return <Square value = {val} row = {row} id = {5 * row+ i} color = {color} />;
+    
+
   }
 
   renderRow(rowId) {
@@ -56,11 +68,10 @@ class Board extends React.Component {
   }
 
   render() {
-    const title = "Welcome to the Wordle Game!";
-
+  
     return (
       <div>
-        <div className="status">{title}</div>
+        <div className="status"></div>
           {this.renderRow(0)}
           {this.renderRow(1)}
           {this.renderRow(2)}
@@ -114,6 +125,8 @@ class Game extends React.Component {
       guessedLetters: Array(26).fill(null),
       currentGuess: "     ",
       history: Array(6).fill(null),
+      tileColors: Array(6),
+      
     };
 
   }
@@ -121,7 +134,7 @@ class Game extends React.Component {
   handleGuess() {
     
     let userGuess = document.getElementById("guessBox").value;
-
+    let colors = Array(5);
     
     if(userGuess.length == 5)
     { 
@@ -134,15 +147,26 @@ class Game extends React.Component {
         if(isLetter(letter))
           this.state.guessedLetters[letter.charCodeAt(0) - 'a'.charCodeAt(0)] = letter;
 
+        if(letter == this.state.word.charAt(i))
+          colors[i] = "green";
+        else if(this.state.word.indexOf(letter) >= 0)
+          colors[i] = "yellow";
+        else 
+          colors[i] = "gray"; 
+
       }
+
       guessHistory.push(userGuess);
+      tileColorStatuses[this.state.guesses] = colors;
 
       this.setState({
 
         currentGuess: userGuess,
         guesses: this.state.guesses + 1,
-        correct: this.state.currentGuess == this.state.word,
+        correct: userGuess == this.state.word,
         history: guessHistory,
+        tileColors: tileColorStatuses,
+
         });
 
       cg = this.getCurrentGuess();
@@ -167,12 +191,24 @@ class Game extends React.Component {
   render() {
 
     let usedLetters = usedLettersToString(this.state.guessedLetters); 
+    let win = this.state.correct;
+    let titleClass = "";
+    let status;
+    
 
+    if(win)
+      {
+         status = "Congratulations! You guessed the wordle!";
+         titleClass = "winFont"
+     }
+    else
+      status = "Welcome to the Wordle Game!";
         
 
     return (
       <div className="game">
         <div className="game-board">
+          <h2 className = {titleClass}>{status}</h2>
           <Board />
         </div>
         <div className="game-info">
