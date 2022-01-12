@@ -64,6 +64,12 @@ ol, ul {
   size: 18px;
 }
 
+.loseFont {
+  
+  color: #dd1212;
+  size: 18px;
+}
+
 .green {
   background-color: green;
 }

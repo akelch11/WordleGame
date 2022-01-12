@@ -232,13 +232,21 @@ class Game extends React.Component {
     let status;
     
 
-    if(win)
+    if(win && this.state.guesses < 6)
       {
-         status = "Congratulations! You guessed the wordle!";
+         status = "Congratulations! You guessed the word!";
          titleClass = "winFont"
      }
     else
-      status = "Welcome to the Wordle Game!";
+      {
+        if(this.state.guesses < 6)
+          status = "Welcome to the Wordle Game!";
+        else
+          {
+            status = "Sorry, you did not guess the word!";
+            titleClass = "loseFont";
+          }
+      }
         
 
     return (
