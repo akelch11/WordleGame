@@ -20,11 +20,12 @@ class Square extends React.Component {
 
   render() {
 
-    var c = "square " + this.props.color;
-    console.log(c);
+    // apply square and appropriate color classes to each box
+    var cn = "square " + this.props.color;
+    
 
     return (
-      <button className= {c}>
+      <button className= {cn}>
         {this.props.value}
       </button>
     );
