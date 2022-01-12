@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
 var cg = "";
 var pg = "";
 var guesses = 0;
 var guessHistory = [];
 var tileColorStatuses = Array(6);
+
+
+
+
+
+
+
 
 
 class Square extends React.Component {
@@ -94,7 +102,7 @@ class Board extends React.Component {
             
                <br></br>
                A yellow box means the letter is in the word and <br></br>
-              in a different spot.
+               in a different spot.
 
                <br></br>
                A gray box means the letter is not in the word.
@@ -114,7 +122,33 @@ class Game extends React.Component {
   {
     super(props);
 
-    let possibleWords = ["dicey", "chick", "bloop"]; 
+    let possibleWords = ["admit", "adopt", "agree", "allow", "alter", "apply", "argue", "arise", "avoid", "begin", "blame", "break", 
+                         "bring", "build", "burst", "carry", "catch", "cause", "check", "claim", "clean", "clear", "climb", "close", 
+                         "count", "cover", "cross", "dance", "doubt", "drink", "drive", "enjoy", "enter", "exist", "fight", "focus", 
+                         "force", "guess", "imply", "issue", "judge", "laugh", "learn", "leave", "let’s", "limit", "marry", "match", 
+                         "occur", "offer", "order", "phone", "place", "point", "press", "prove", "raise", "reach", "refer", "relax", 
+                         "serve", "shall", "share", "shift", "shoot", "sleep", "solve", "sound", "speak", "spend", "split", "stand", 
+                         "start", "state", "stick", "study", "teach", "thank", "think", "throw", "touch", "train", "treat", "trust", 
+                         "visit", "voice", "waste", "watch", "worry", "would", "write", "abuse", "adult", "agent", "anger", "apple",
+                         "award", "basis", "beach", "birth", "block", "blood", "board", "brain", "bread", "break", "brown", "buyer", 
+                         "cause", "chain", "chair", "chest", "chief", "child", "china", "claim", "class", "clock", "coach", "coast",
+                         "court", "cover", "cream", "crime", "cross", "crowd", "crown", "cycle", "dance", "death", "depth", "doubt",
+                         "draft", "drama", "dream", "dress", "drink", "drive", "earth", "enemy", "entry", "error", "event", "faith",
+                         "fault", "field", "fight", "final", "floor", "focus", "force", "frame", "frank", "front", "fruit", "glass",
+                         "grant", "grass", "green", "group", "guide", "heart", "henry", "horse", "hotel", "house", "image", "index",
+                         "input", "issue", "japan", "jones", "judge", "knife", "laura", "layer", "level", "lewis", "light", "limit",
+                         "lunch", "major", "march", "match", "metal", "model", "money", "month", "motor", "mouth", "music", "night",
+                         "noise", "north", "novel", "nurse", "offer", "order", "other", "owner", "panel", "paper", "party", "peace",
+                         "peter", "phase", "phone", "piece", "pilot", "pitch", "place", "plane", "plant", "plate", "point", "pound",
+                         "power", "press", "price", "pride", "prize", "proof", "queen", "radio", "range", "ratio", "reply", "right",
+                         "river", "round", "route", "rugby", "scale", "scene", "scope", "score", "sense", "shape", "share", "sheep",
+                         "sheet", "shift", "shirt", "shock", "sight", "simon", "skill", "sleep", "smile", "smith", "smoke", "sound",
+                         "south", "space", "speed", "spite", "sport", "squad", "staff", "stage", "start", "state", "steam", "steel",
+                         "stock", "stone", "store", "study", "stuff", "style", "sugar", "table", "taste", "terry", "theme", "thing",
+                         "title", "total", "touch", "tower", "track", "trade", "train", "trend", "trial", "trust", "truth", "uncle",
+                         "union", "unity", "value", "video", "visit", "voice", "waste", "watch", "water", "while", "white", "whole",
+                         "woman", "world", "youth"
+                        ];
     let rand = Math.floor(Math.random() * possibleWords.length);
 
 
@@ -127,6 +161,7 @@ class Game extends React.Component {
       currentGuess: "     ",
       history: Array(6).fill(null),
       tileColors: Array(6),
+      
       
     };
 
