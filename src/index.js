@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-/* test changes */
+/* test changes for herkou git push*/
 
 var cg = "";
 var pg = "";
@@ -152,7 +152,7 @@ class Game extends React.Component {
 
       guesses: 0,
       correct: false,
-      word: "truth",
+      word: possibleWords[rand],
       guessedLetters: Array(26).fill(null),
       currentGuess: "     ",
       history: Array(6).fill(null),
