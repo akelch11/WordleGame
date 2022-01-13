@@ -1,7 +1,8 @@
 body {
-  font: 18px "copperplate", serif;
+  font: 18px "helvetica", sans-serif;
   margin: 28px;
   background: #ddb9c2;
+  color: black;
 }
 
 ol, ul {
@@ -33,6 +34,7 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 34px;
+  color: white
 }
 
 .square:focus {
@@ -60,7 +62,7 @@ ol, ul {
 }
 
 .winFont {
-  color: #09be09;
+  color: rgb(10, 179, 10);
   size: 18px;
 }
 
@@ -71,13 +73,41 @@ ol, ul {
 }
 
 .green {
-  background-color: green;
+  background-color: rgb(56, 197, 56);
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: rgb(220, 190, 17);
 }
 
 .gray {
   background-color: gray;
 }
+
+.playAgainBox {
+  
+  background-color: #415ee2;
+  width: 40px;
+  height: 20px;
+  size: 16px;
+  
+  padding: 2px;
+  margin: 2px;
+  color: white;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+

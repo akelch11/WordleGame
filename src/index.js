@@ -109,6 +109,8 @@ class Board extends React.Component {
   }
 }
 
+
+
 class Game extends React.Component {
   
   constructor(props)
@@ -149,7 +151,7 @@ class Game extends React.Component {
 
       guesses: 0,
       correct: false,
-      word: possibleWords[rand],
+      word: "truth",
       guessedLetters: Array(26).fill(null),
       currentGuess: "     ",
       history: Array(6).fill(null),
@@ -226,12 +228,20 @@ class Game extends React.Component {
     let titleClass = "";
     let status;
     let revealWord = "";
+    let playAgainMessage = "";
+
+    function makePlayAgainVisible() {
+      playAgainMessage = "Play Again!";
+      document.getElementById("playAgain").classList.remove("hidden");
+      document.getElementById("playAgain").classList.add("visible");
+    };
     
 
     if(win && this.state.guesses <= 6)
       {
          status = "Congratulations! You guessed the word!";
-         titleClass = "winFont"
+         titleClass = "winFont";
+         makePlayAgainVisible();
      }
     else
       {
@@ -242,12 +252,14 @@ class Game extends React.Component {
             status = "Sorry, you did not guess the word!";
             titleClass = "loseFont";
             revealWord = "The word was: " + this.state.word;
+            makePlayAgainVisible();
           }
       }
         
 
     return (
       <div className="game">
+      
         <div className="game-board">
           <h2 className = {titleClass}>{status}</h2>
           <Board />
@@ -255,7 +267,7 @@ class Game extends React.Component {
         <div className="game-info">
           <div>
             {/* status */}
-            <h5> GUESS A WORD HERE:</h5>
+            <h4> GUESS A WORD HERE:</h4>
             <input type = "text" id = "guessBox"/>
             <button type = "submit" className = "spacing"  onClick = {this.handleGuess.bind(this)}>
                Enter Guess 
@@ -264,14 +276,19 @@ class Game extends React.Component {
               {revealWord}
             </h2>
           </div>
-          <ol>{/* TODO */} </ol>
-
-          <p> Letters Not In Word: <br></br>
+          
+          <h5> Letters Not In Word: <br></br>
               {usedLetters}
-          </p>
-          <p> Letters Not Guessed: <br></br>
+          </h5>
+          <h5> Letters Not Guessed: <br></br>
               {unguessedLetters}
-          </p>
+          </h5>
+          <div>
+              <a className = "playAgainBox hidden whiteText" id = "playAgain"
+              onClick = {() => {if(playAgainMessage != "") refreshPage();}}>
+                 Play Again!
+             </a>
+          </div>
 
           
         </div>
@@ -282,20 +299,12 @@ class Game extends React.Component {
 
 
 
-// ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
-
-
 function isLetter(c)
 {
   return c.toLowerCase() != c.toUpperCase();
 }
 
-console.log(cg);
+
 
 function usedLettersToString(letters, word)
 {
@@ -330,4 +339,23 @@ function unguessedLettersToString(letters, word)
     return usedLetters;
 }
 
-console.log(guessHistory.toString());
+
+function refreshPage() {
+  window.location.reload();
+}
+
+
+
+
+// ========================================
+
+ReactDOM.render(
+  <Game />,
+  document.getElementById('root')
+);
+
+
+
+
+
+
