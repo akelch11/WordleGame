@@ -42,7 +42,9 @@
 
 ## Try It Out!
 
-<p align = "left"> Try out the game at the following link: <a href = "bit.ly/31WYI2V"> <ins style="color:blue"> bit.ly/31WYI2V </ins> </a> </p> 
+<p align = "left"> Try out the game here: 
+<a href = "https://morning-meadow-23275.herokuapp.com/"> <ins style="color:blue"> Go To Project</ins> </a>
+ </p> 
  
 
 
