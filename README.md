@@ -42,8 +42,8 @@
 
 ## Try It Out!
 
-<p align = "left"> Try out the game at [this link!](bit.ly/31WYI2V)
- </p>
+<p align = "left"> Try out the game at</p> [this link!](bit.ly/31WYI2V)
+ 
 
 
 ### Built With
