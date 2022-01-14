@@ -42,7 +42,7 @@
 
 ## Try It Out!
 
-<p> align = "left"> Try out the game at <ins href = "bit.ly/31WYI2V"> this link! </ins>
+<p align = "left"> Try out the game at <ins href = "bit.ly/31WYI2V"> this link! </ins>
  </p>
 
 
