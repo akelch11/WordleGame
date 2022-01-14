@@ -69,7 +69,7 @@ Creator - Adam Kelch (https://www.linkedin.com/in/adam-kelch/) - akelch@princeto
 
 Repository Link: [https://github.com/akelch11/WordleGame](https://github.com/akelch11/WordleGame)
 
-App Link: 
+App Link:  [https://bit.ly/31WYI2V](https://bit.ly/31WYI2V)
 
 
 
