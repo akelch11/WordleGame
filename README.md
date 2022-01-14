@@ -5,6 +5,7 @@
 *** or simply open an issue with the tag "enhancement".
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
+** TEST
 -->
 
 
@@ -39,7 +40,10 @@
 </div>
 
 
+## Try It Out!
 
+<p> align = "left"> Try out the game at <ins href = "bit.ly/31WYI2V"> this link! </ins>
+ </p>
 
 
 ### Built With
