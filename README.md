@@ -40,7 +40,7 @@
 </div>
 
 
-## Try It Out!
+## Try It Out: Web App Link
 
 <p align = "left"> Try out the game here:     
 <a href = "https://morning-meadow-23275.herokuapp.com/"> <ins style="color:blue">Play Now!</ins> </a>
