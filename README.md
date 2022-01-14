@@ -42,8 +42,8 @@
 
 ## Try It Out!
 
-<p align = "left"> Try out the game here: 
-<a href = "https://morning-meadow-23275.herokuapp.com/"> <ins style="color:blue"> Go To Project</ins> </a>
+<p align = "left"> Try out the game here:     
+<a href = "https://morning-meadow-23275.herokuapp.com/"> <ins style="color:blue">Play Now!</ins> </a>
  </p> 
  
 
@@ -67,7 +67,10 @@ Distributed under the MIT License.
 
 Creator - Adam Kelch (https://www.linkedin.com/in/adam-kelch/) - akelch@princeton.edu
 
-Project Link: [https://github.com/akelch11/WordleGame](https://github.com/akelch11/WordleGame)
+Repository Link: [https://github.com/akelch11/WordleGame](https://github.com/akelch11/WordleGame)
+
+App Link: 
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
