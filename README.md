@@ -42,7 +42,7 @@
 
 ## Try It Out!
 
-<p align = "left"> Try out the game at</p> [this link!](bit.ly/31WYI2V)
+<p align = "left"> Try out the game at the following link: <ins style="color:blue"> bit.ly/31WYI2V </ins> </p> 
  
 
 
